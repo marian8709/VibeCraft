@@ -20,7 +20,7 @@ const HomePage = () => {
   return (
     <div className="p-4 max-2-7xl mx-auto">
       <Input value={value} onChange={(e) => setValue(e.target.value)}/>
-      <Button onClick={() => invoke.mutate({ value })}>Invoke Background Job</Button>
+      <Button disabled={invoke.isPending} onClick={() => invoke.mutate({ value })}>Invoke Background Job</Button>
     </div>
   )
 }
